@@ -83,3 +83,8 @@ override.tf.json
 
 # Include lock file for version consistency
 !.terraform.lock.hcl
+
+### SERDP
+# Ignore demo output
+*/demo_outdir
+
