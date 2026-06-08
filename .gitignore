@@ -86,5 +86,5 @@ override.tf.json
 
 ### SERDP
 # Ignore demo output
-*/demo_outdir
+**/demo_outdir/
 
