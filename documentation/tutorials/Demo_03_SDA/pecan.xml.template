@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pecan>
+  <info>
+    <notes>Initial SIPNET run for Demo 03</notes>
+    <userid>-1</userid>
+    <username>serdp</username>
+    <date>2026-06-09</date>
+  </info>
+
+  <outdir>demo_outdir</outdir>
+  <modeloutdir>demo_outdir/out</modeloutdir>
+  <rundir>demo_outdir/run</rundir>
+
+  <pfts>
+    <pft>
+      <name>temperate.coniferous</name>
+      <posterior.files>pft/temperate.coniferous/prior.distns.Rdata</posterior.files>
+      <outdir>pft/temperate.coniferous</outdir>
+    </pft>
+  </pfts>
+
+  <model>
+    <type>SIPNET</type>
+    <revision>git</revision>
+    <delete.raw>FALSE</delete.raw>
+    <binary>/shared-ebs/software/models/sipnet/sipnet</binary>
+  </model>
+
+  <ensemble>
+    <size>10</size>
+    <variable>NPP</variable>
+    <samplingspace>
+      <parameters>
+        <method>halton</method>
+      </parameters>
+    </samplingspace>
+    <start.year>1979</start.year>
+    <end.year>2015</end.year>
+  </ensemble>
+
+  <run>
+    <site>
+      <met.start>1979/01/01</met.start>
+      <met.end>2015/12/31</met.end>
+      <name>UNDERC</name>
+      <lat>???</lat>
+      <lon>???</lon>
+    </site>
+    <inputs>
+      <met>
+        <source>NARR</source>
+        <output>SIPNET</output>
+        <username>serdp</username>
+      </met>
+    </inputs>
+    <start.date>1979/01/01</start.date>
+    <end.date>2015/12/31</end.date>
+  </run>
+
+  <host>
+    <outdir>demo_outdir/out</outdir>
+    <rundir>demo_outdir/run</rundir>
+  </host>
+</pecan>

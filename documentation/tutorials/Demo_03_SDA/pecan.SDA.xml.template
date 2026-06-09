@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pecan>
+  <info>
+    <notes>State-data assimilation settings placeholder</notes>
+    <userid>-1</userid>
+    <username>serdp</username>
+    <date>2026-06-09</date>
+  </info>
+  <outdir>demo_outdir</outdir>
+  <modeloutdir>demo_outdir/out</modeloutdir>
+  <rundir>demo_outdir/run</rundir>
+
+  <!--
+    1) Add the <state.data.assimilation> block here.
+    2) Remove the original <pfts> block from this file.
+    3) Paste the <pfts> block from your PDA file (pecan.pda[UNIQUEID].xml).
+  -->
+
+  <state.data.assimilation>
+    <!-- copy the block from the tutorial and adjust n.ensemble, data, state.variables, etc. -->
+  </state.data.assimilation>
+
+  <!-- PDA <pfts> block goes here -->
+
+  <run>
+    <site>
+      <met.start>1979/01/01</met.start>
+      <met.end>2015/12/31</met.end>
+      <name>UNDERC</name>
+      <lat>???</lat>
+      <lon>???</lon>
+    </site>
+    <inputs>
+      <met>
+        <source>NARR</source>
+        <output>SIPNET</output>
+        <username>serdp</username>
+      </met>
+    </inputs>
+    <start.date>1979/01/01</start.date>
+    <end.date>2015/12/31</end.date>
+  </run>
+
+  <!-- host settings are optional; use your cluster host adapter as appropriate -->
+  <host>
+    <outdir>demo_outdir/out</outdir>
+    <rundir>demo_outdir/run</rundir>
+  </host>
+</pecan>
