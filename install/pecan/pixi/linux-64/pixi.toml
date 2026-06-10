@@ -18,9 +18,10 @@ depends-on = [
   { task = "install_gh", args = [ { pkg = "amerifluxr" }, { repo = "chuhousen/amerifluxr" } ] },
   { task = "install_gh", args = [ { pkg = "nneo" }, { repo = "ropensci-archive/nneo" } ] }
 ]
-cmd = "Rscript -e 'pak::repo_add(\"pecanproject.r-universe.dev\")' -e 'pak::pak(c(\"PEcAn.all\", \"PEcAn.SIPNET\"))'"
+cmd = "Rscript -e 'pak::repo_add(\"pecanproject.r-universe.dev\")' -e 'pak::pak(c(\"PEcAn.all\", \"PEcAn.SIPNET\", \"PEcAnAssimSequential\"))'"
 
 [dependencies]
+jags = "*"
 r = ">=4"
 pandoc = ">=3.9,<4"
 r-roxygen2 = "==7.3.2"
